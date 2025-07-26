@@ -8,3 +8,13 @@
   font-weight: 400;
   font-style: normal;
 }
+
+/* Color Variables */
+
+:root{
+    --dark-1: #131313;
+    --dark-2: #424242; 
+    --dark-3: #727272;
+    --btn-bg: #FF900E;
+    --footer-bg: #FFF4E7;
+}
