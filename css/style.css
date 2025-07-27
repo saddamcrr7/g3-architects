@@ -101,7 +101,6 @@ section{
 /* Features Style */
 
 .features{
-  display: flex;
   align-items: center;
   gap: 70px;
 }
@@ -136,10 +135,84 @@ section{
   color: var(--btn-bg);
   font-weight: 800;
 }
+/* Features List Style */
+
+.features-list{
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.features-list-content{
+  position: relative;
+}
+.features-list-heading{
+  color: var(--dark-1);
+  font-weight: 700;
+  font-size: 2.813em;
+  width: 450px;
+}
+.features-list-heading::before{
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 105px;
+  background-color: var(--btn-bg);
+  top: 15px;
+  left: -25px;
+}
+.features-list-description{
+  color: var(--dark-3);
+  width: 600px;
+  margin: 30px 0;
+}
+.features-list-items{
+  margin: 0;
+  padding: 0;
+}
+.features-list-item{
+  width: 600px;
+  list-style: none;
+  box-shadow: 0px 4px 30px 0 rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  margin-bottom: 15px;
+  padding: 30px;
+}
+.features-list-item-heading{
+  font-weight: 600;
+  font-size: 1.25em;
+  color: var(--dark-1);
+}
+.features-list-item-description{
+  color: var(--dark-3);
+}
+.features-list-image{
+  position: relative;
+}
+.features-list-thumbnail{
+  width: 100%;
+}
+.experience-card{
+  background-color: var(--btn-bg);
+  color: var(--white);
+  width: 250px;
+  height: 150px;
+  border-radius: 8px;
+  text-align: center;
+  padding: 45px;
+  position: absolute;
+  bottom: -25px;
+  left: -25px;
+  font-size: 2em;
+  font-weight: 800;
+}
+.experience-span{
+  font-weight: 500;
+  font-size: .85em;
+}
 /* Mobile Responsive Header */
 
 @media screen and (max-width: 576px){
-  .navbar, .nav-items{
+  .navbar, .nav-items, .features{
     flex-direction: column;
   }
   .banner-content{
@@ -150,5 +223,20 @@ section{
   }
   .banner-description{
     font-size: .75em;
+  }
+  .features-image-container{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .features-content{
+    padding: 0 45px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  .navbar, .nav-items, .features, .features-list{
+    flex-direction: column;
+  }
+  .features-image-container{
+    grid-template-columns: repeat(2, 1fr);
   }
 }
